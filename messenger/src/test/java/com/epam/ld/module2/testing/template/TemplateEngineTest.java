@@ -4,6 +4,7 @@ import com.epam.ld.module2.testing.Client;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class TemplateEngineTest {
 
@@ -18,5 +19,10 @@ public class TemplateEngineTest {
         String expected = "Hello Manohar! Hope you are doing good";
 
         assertEquals(expected, message);
+    }
+
+    @Test
+    public void Should_ThrowException_When_AtleastOnePlaceHolderIsNotProvidedAtRuntime() {
+        fail();
     }
 }
