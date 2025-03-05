@@ -12,11 +12,11 @@ public class TemplateEngineTest {
         Template template = new Template();
         template.setMessage("Hello #{subject}! Hope you are doing good");
         Client client = new Client();
-
+        client.setAddresses("Manohar");
         TemplateEngine templateEngine = new TemplateEngine();
         String message = templateEngine.generateMessage(template, client);
+        String expected = "Hello Manohar! Hope you are doing good";
 
-
-        assertEquals(message, "Hello Manohar! Hope you are doing good");
+        assertEquals(expected, message);
     }
 }
